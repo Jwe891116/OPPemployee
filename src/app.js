@@ -1,30 +1,26 @@
-import express from "express";
-import packageRoutes from "./routes/employeeRoutes.js";
-import path from "path";
+import express from 'express';
+import bodyParser from 'body-parser';
+import employeeRoutes from './routes/employeeRoutes';
+import path from 'path';  // Import path module to resolve directory paths
 
 const app = express();
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(process.cwd(), "public")));
-app.set("view engine", "ejs");
-app.set("views", path.join(process.cwd(), "views"));
-
-const loggingMiddleware = (req, res, next) => {
-  const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] ${req.method} ${req.url}`);
-  next();
-};
-
-app.use(loggingMiddleware);
-
-//How to use the routes middleware
-app.use("/", employeeRoutes);
-
-app.use((req, res) => {
-  res.status(404).send("404 Not Found.\n");
-});
-
 const PORT = 3000;
+
+// Middleware to parse JSON requests
+app.use(bodyParser.json());
+
+// Serve static files from the "public" directory
+app.use(express.static(path.join(path.join(process.cwd(), 'public'))));
+
+// Use employee routes
+app.use('/api', employeeRoutes);
+
+// Route to serve index.html
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
+
+// Start the server
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });

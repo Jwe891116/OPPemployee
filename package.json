@@ -1,0 +1,32 @@
+{
+  "name": "oppemployee",
+  "version": "1.0.0",
+  "description": "O.O.P Class (Employee Assignment)",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jwe891116/OPPemployee.git"
+  },
+  "author": "Joshua Emmanuel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jwe891116/OPPemployee/issues"
+  },
+  "homepage": "https://github.com/Jwe891116/OPPemployee#readme",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.14.1"
+  }
+}
