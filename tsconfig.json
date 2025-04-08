@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES6",               // Specifies the target JavaScript version (ES6)
-    "module": "CommonJS",          // Module system for Node.js
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",          // Module system for Node.js
     "outDir": "./dist",            // Directory to output the compiled JS files
     "rootDir": "./src",            // Directory where your source TypeScript files are
-    "esModuleInterop": true        // Ensures compatibility with CommonJS modules
+    "esModuleInterop": true,        // Ensures compatibility with CommonJS modules
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
   "include": [
     "src/**/*.ts"                  // Include all TypeScript files in the src folder

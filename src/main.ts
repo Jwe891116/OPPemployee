@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import employeeRoutes from './routes/employeeRoutes';
+import employeeRoutes from './routes/employeeRoutes.ts';
 import path from 'path';  // Import path module to resolve directory paths
 
 const app = express();

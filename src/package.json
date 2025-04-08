@@ -2,7 +2,14 @@
   "name": "oppemployee",
   "version": "1.0.0",
   "description": "O.O.P Class (Employee Assignment)",
-  "type": "module",
+  
+    "type": "module",
+    "ts-node": {
+      "esm": true,
+      "experimentalSpecifierResolution": "node"
+    },
+  
+  
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",

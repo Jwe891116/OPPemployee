@@ -1,7 +1,7 @@
 import { Employee } from "./employee";
 import { IPartTimeEmployee } from "../interfaces/iPartTime";
 
-export class PartTimeEmployee extends Employee implements IPartTimeEmployee {
+export class partTime extends Employee implements IPartTimeEmployee {
     constructor(
         name: string, 
         id: number, 
